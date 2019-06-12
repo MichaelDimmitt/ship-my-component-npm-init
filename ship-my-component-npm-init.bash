@@ -1,4 +1,5 @@
-[ -f package.json ] && rm package.json;
+[ -f package.json ] &&
+  echo "npm-init-ship-my-component did nothing. because a package.json was found; Delete the pacakage.json for the correct functionality" || {
 dir=${PWD##*/}
 read -p "Package publish name: ($dir)" name;
 read -p "Version: (1.0.0)" version;
@@ -9,33 +10,34 @@ read -p "Project description: " description;
 /usr/bin/expect <<!
 spawn npm init
 expect "package name:"
-send "$name\n" 
+send "$name\n"
 expect "version:"
-send "$version\n" 
+send "$version\n"
 expect "description:"
-send "$description\n" 
+send "$description\n"
 expect "entry point:"
-send "build/index.js\n" 
+send "build/index.js\n"
 expect "test command:"
-send "webpack\n" 
+send "webpack\n"
 expect "git repository"
-send "\n" 
+send "\n"
 expect "keywords:"
-send "\n" 
+send "\n"
 expect "author:"
-send "\n" 
+send "\n"
 expect "license:"
-send "\n" 
+send "\n"
 expect "Is this O*"
 send "\n"
 expect eof
 !
 
-# send "$name\n" 
-# send "$entryPoint\n" 
-# send "$testCommand\n" 
-# send "$gitRepo\n" 
-# send "$keywords\n" 
-# send "$author\n" 
-# send "$license\n" 
+# send "$name\n"
+# send "$entryPoint\n"
+# send "$testCommand\n"
+# send "$gitRepo\n"
+# send "$keywords\n"
+# send "$author\n"
+# send "$license\n"
 # send "$isOkay\n"
+}
