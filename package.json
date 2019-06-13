@@ -1,7 +1,7 @@
 {
   "name": "ship-my-component-npm-init",
-  "version": "1.0.1",
-  "bin": "source ship-my-component-npm-init.bash",
+  "version": "1.0.3",
+  "bin": "./ship-my-component-npm-init.bash",
   "description": "Remove human error for adding webpack and build/index.js entrypointfor npm init command.",
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MichaelDimmitt/ship-my-component-npm-init/issues"
   },
-  "homepage": "https://github.com/MichaelDimmitt/ship-my-component-npm-init#readme"
+  "homepage": "https://github.com/MichaelDimmitt/ship-my-component-npm-init#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
